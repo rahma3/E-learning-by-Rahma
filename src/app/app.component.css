@@ -1,0 +1,14 @@
+/* styles.css */
+.spacer {
+    flex: 1 1 auto;
+  }
+  
+  .container {
+    margin: 20px;
+  }
+  
+  a.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  

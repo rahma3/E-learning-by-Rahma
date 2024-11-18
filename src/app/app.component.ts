@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {MatSlideToggleModule} from @angular/material/sli
 
 @Component({
   selector: 'app-root',
