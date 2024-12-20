@@ -1,12 +1,4 @@
-<mat-toolbar color="primary">
-  <span>E-Learning</span>
-  <span class="spacer"></span> <!-- Ajout d'une classe CSS pour l'espacement -->
-  <nav>
-    <a mat-button routerLink="/courses" routerLinkActive="active">Courses</a>
-    <a mat-button routerLink="/utilisateurs" routerLinkActive="active">Utilisateurs</a>
-  </nav>
-</mat-toolbar>
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
 
-<div class="container">
-  <router-outlet></router-outlet> <!-- Zone de contenu dynamique -->
-</div>

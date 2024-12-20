@@ -1,0 +1,66 @@
+/* General Navbar Styles */
+.navbar {
+    background-color: #00457c;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  /* Navbar Item Container */
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Navbar Items */
+  .navbar-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Button Styles */
+  .navbar-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  
+  .navbar-btn svg {
+    fill: white;
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Logo Styling */
+  .logo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  /* Mobile Dropdown */
+  @media (max-width: 768px) {
+    .navbar-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-item {
+      width: 100%;
+      justify-content: flex-start;
+    }
+  
+    .navbar-btn {
+      font-size: 1rem;
+    }
+  }
+  

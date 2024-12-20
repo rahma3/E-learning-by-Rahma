@@ -1,14 +1,24 @@
-/* styles.css */
-.spacer {
-    flex: 1 1 auto;
+nav {
+    background-color: #f8f9fa;
+    padding: 1rem;
   }
   
-  .container {
-    margin: 20px;
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
   }
   
-  a.active {
+  nav a {
+    text-decoration: none;
+    color: #007bff;
     font-weight: bold;
-    text-decoration: underline;
+  }
+  
+  nav a.active {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
   }
   
