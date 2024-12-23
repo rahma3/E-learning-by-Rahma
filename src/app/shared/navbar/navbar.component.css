@@ -1,66 +1,86 @@
 /* General Navbar Styles */
 .navbar {
-    background-color: #00457c;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  
-  /* Navbar Item Container */
+  background-color: #00457c;
+  color: white;
+  display: flex;
+  justify-content: flex-start; /* Ensures items align starting from the left */
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 20px; /* Add space between links */
+}
+
+/* Navbar Item Container */
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo Styling */
+.logo {
+  margin-right: auto; /* Pushes the rest of the content to the right */
+}
+
+.logo img {
+  clip-path: circle(50%);
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  background: transparent;
+  border: none;
+}
+
+/* Navbar Items */
+.navbar-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Button Styles */
+.navbar-btn {
+  background: none;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navbar-btn:hover {
+  background-color: transparent;
+}
+
+.navbar-btn svg {
+  fill: white;
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile Dropdown */
+@media (max-width: 768px) {
   .navbar-content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  /* Navbar Items */
-  .navbar-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  /* Button Styles */
-  .navbar-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.1rem;
-    cursor: pointer;
-  }
-  
-  .navbar-btn svg {
-    fill: white;
-    width: 24px;
-    height: 24px;
-  }
-  
-  /* Logo Styling */
-  .logo img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-  }
-  
-  /* Mobile Dropdown */
-  @media (max-width: 768px) {
-    .navbar-content {
       flex-direction: column;
       align-items: flex-start;
-    }
-  
-    .navbar-item {
+  }
+
+  .navbar-item {
       width: 100%;
       justify-content: flex-start;
-    }
-  
-    .navbar-btn {
-      font-size: 1rem;
-    }
   }
-  
+
+  .navbar-btn {
+      font-size: 1rem;
+  }
+}
