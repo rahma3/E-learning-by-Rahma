@@ -6,29 +6,32 @@ import { AdmissionsComponent } from './pages/admissions/admissions.component';
 import { DepartmentsComponent } from './pages/departments/departments.component';
 import { NewsComponent } from './pages/news/news.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
-import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 // Define your routes
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent},
+  { path: 'about', component: AboutComponent },
   { path: 'admissions', component: AdmissionsComponent },
   { path: 'departments', component: DepartmentsComponent },
   { path: 'news', component: NewsComponent },
   { path: 'contact', component: ContactComponent },
-  { path: '**', redirectTo: '/home' }, // Fallback route
-  { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
+
+  // Lazy-loaded routes
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./pages/login/login.module').then((m) => m.LoginModule),
+  },
+
+  // Fallback route (always last)
+  { path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes),
-    FormsModule,  // Add FormsModule here for ngModel
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
